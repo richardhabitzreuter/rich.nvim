@@ -1,9 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-require("nvim-treesitter.install").prefer_git = false
-require("nvim-treesitter.install").compilers = { "clang", "gcc" }
-
 require("presence").setup({
   -- General options
   auto_update = true, -- Update activity based on autocmd events (if `false`, map or manually execute `:lua package.loaded.presence:update()`)
@@ -27,6 +24,3 @@ require("presence").setup({
   workspace_text = "Working on %s", -- Format string rendered when in a git repository (either string or function(project_name: string|nil, filename: string): string)
   line_number_text = "Line %s out of %s", -- Format string rendered when `enable_line_number` is set to true (either string or function(line_number: number, line_count: number): string)
 })
-
-local g = vim.g
-g.OmniSharp_server_use_net6 = 0
